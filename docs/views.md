@@ -10,15 +10,17 @@ They are all used to display a set of options. Menus (see sample2.py) can only d
 
 Extended lists (see sample3.py) are like simple lists but have a side bar with more options.
 
-## Example:
+## Example
 
 ```python
+import openpyterminal as pt
+
 class MainView(pt.ListExtended):
     def __init__(self):
         super().__init__("Title")
         
         # Set and display options
-        self.options(["list", "of", "options"])
+        self.options = ["list", "of", "options"]
         self.update()
         
     # Override button A
