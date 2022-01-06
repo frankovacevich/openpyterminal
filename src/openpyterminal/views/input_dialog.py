@@ -163,10 +163,13 @@ class InputDialog(QDialog):
             "units": "",
             "validate": None,
             "help": "",
+            "date_format": "%d/%m/%y",
         }
 
         for c in content: default_content[c] = content[c]
         dialog = InputDialog(title, default_content)
+        dialog.date_format = default_content["date_format"]
+        dialog.aux_input.set_date_format(default_content["date_format"])
 
         if "hide_btn_c" in options and options["hide_btn_c"]: dialog.hide_btn_c()
         if "hide_btn_d" in options and options["hide_btn_d"]: dialog.hide_btn_d()
@@ -174,3 +177,4 @@ class InputDialog(QDialog):
 
         dialog.exec_()
         return dialog.result
+

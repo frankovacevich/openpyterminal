@@ -19,6 +19,10 @@ class InputHelper:
         elif input_type == "options" and len(options) > 0: self.value = self.options_keys[0]
         else: self.value = ""
 
+    def set_date_format(self, date_format):
+        self.date_format = date_format
+        if self.type == "date": self.value = self.today()
+
     def get_value(self):
         if not self.validate(): return None
 
@@ -108,3 +112,4 @@ class InputHelper:
 
     def today(self):
         return datetime.datetime.today().strftime(self.date_format)
+

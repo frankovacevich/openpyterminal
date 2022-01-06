@@ -207,6 +207,7 @@ class InputSequence(QWidget):
         else:
             options = c['options'] if 'options' in c else {}
             self.aux_input = InputHelper(c['type'], options=options)
+            self.aux_input.set_date_format(self.date_format)
 
             if v is None and 'default' in c:
                 if c['default'] == 'auto': v = self.sequence.get_value_from_previous_entry()
@@ -386,3 +387,4 @@ class InputSequence(QWidget):
         self.chronometer = Chronometer()
         self.sequence.reset()
         self.update()
+
