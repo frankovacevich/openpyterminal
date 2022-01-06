@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="16" height="16" viewBox="0 0 16 16" version="1.1">
+<g id="surface1">
+<path style=" stroke:none;fill-rule:nonzero;fill:rgb(100%,100%,100%);fill-opacity:1;" d="M 8 2 L 8 3 L 14 3 L 14 2 Z M 8 2 "/>
+<path style=" stroke:none;fill-rule:evenodd;fill:rgb(100%,100%,100%);fill-opacity:1;" d="M 6 3 C 6 4.105469 5.105469 5 4 5 C 2.894531 5 2 4.105469 2 3 C 2 1.894531 2.894531 1 4 1 C 5.105469 1 6 1.894531 6 3 Z M 6 3 "/>
+<path style=" stroke:none;fill-rule:nonzero;fill:rgb(100%,100%,100%);fill-opacity:1;" d="M 8 7 L 8 8 L 14 8 L 14 7 Z M 8 7 "/>
+<path style=" stroke:none;fill-rule:evenodd;fill:rgb(100%,100%,100%);fill-opacity:1;" d="M 6 8 C 6 9.105469 5.105469 10 4 10 C 2.894531 10 2 9.105469 2 8 C 2 6.894531 2.894531 6 4 6 C 5.105469 6 6 6.894531 6 8 Z M 6 8 "/>
+<path style=" stroke:none;fill-rule:nonzero;fill:rgb(100%,100%,100%);fill-opacity:1;" d="M 8 12 L 8 13 L 14 13 L 14 12 Z M 8 12 "/>
+<path style=" stroke:none;fill-rule:evenodd;fill:rgb(100%,100%,100%);fill-opacity:1;" d="M 6 13 C 6 14.105469 5.105469 15 4 15 C 2.894531 15 2 14.105469 2 13 C 2 11.894531 2.894531 11 4 11 C 5.105469 11 6 11.894531 6 13 Z M 6 13 "/>
+</g>
+</svg>

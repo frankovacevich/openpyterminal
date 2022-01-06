@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="16" height="16" viewBox="0 0 16 16" version="1.1">
+<g id="surface1">
+<path style=" stroke:none;fill-rule:evenodd;fill:rgb(0%,0%,0%);fill-opacity:1;" d="M 7 4 L 9 4 L 9 9 L 7 9 Z M 7 4 "/>
+<path style=" stroke:none;fill-rule:evenodd;fill:rgb(0%,0%,0%);fill-opacity:1;" d="M 4 3 L 12 3 C 12.554688 3 13 3.445312 13 4 C 13 4.554688 12.554688 5 12 5 L 4 5 C 3.445312 5 3 4.554688 3 4 C 3 3.445312 3.445312 3 4 3 Z M 4 3 "/>
+<path style=" stroke:none;fill-rule:evenodd;fill:rgb(0%,0%,0%);fill-opacity:1;" d="M 10 4 C 10 5.105469 9.105469 6 8 6 C 6.894531 6 6 5.105469 6 4 C 6 2.894531 6.894531 2 8 2 C 9.105469 2 10 2.894531 10 4 Z M 10 4 "/>
+<path style=" stroke:none;fill-rule:evenodd;fill:rgb(0%,0%,0%);fill-opacity:1;" d="M 6 7 L 10 7 C 11.105469 7 12 7.894531 12 9 L 12 13 C 12 14.105469 11.105469 15 10 15 L 6 15 C 4.894531 15 4 14.105469 4 13 L 4 9 C 4 7.894531 4.894531 7 6 7 Z M 6 7 "/>
+<path style=" stroke:none;fill-rule:evenodd;fill:rgb(0%,0%,0%);fill-opacity:1;" d="M 0 9 L 16 9 L 16 13 L 0 13 Z M 0 9 "/>
+</g>
+</svg>

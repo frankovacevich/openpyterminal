@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="16" height="16" viewBox="0 0 16 16" version="1.1">
+<g id="surface1">
+<path style=" stroke:none;fill-rule:evenodd;fill:rgb(0%,0%,0%);fill-opacity:1;" d="M 5 0 L 5 3 L 4.875 3 C 3.835938 3 3 3.835938 3 4.875 L 3 10.125 C 3 10.84375 3.40625 11.460938 4 11.773438 L 4 13.8125 C 4 15.023438 4.976562 16 6.1875 16 L 9.8125 16 C 11.023438 16 12 15.023438 12 13.8125 L 12 11.773438 C 12.59375 11.460938 13 10.84375 13 10.125 L 13 4.875 C 13 3.835938 12.164062 3 11.125 3 L 11 3 L 11 2 L 9 2 L 9 3 L 7 3 L 7 0 Z M 5 5 L 11 5 L 11 6 L 5 6 Z M 5 7 L 11 7 L 11 8 L 5 8 Z M 5 9 L 11 9 L 11 10 L 5 10 Z M 5 9 "/>
+</g>
+</svg>
