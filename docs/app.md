@@ -25,7 +25,7 @@ class Sample1(pt.ListSimple):
     def select_option(self, number):
         pt.MessageDialog.show_dialog("Dialog Example", f"You have selected option {number}", {'hide_btn_c': True})
         
-# Use this lines to create an OpenPyTerminal App
+# Use these lines to create an OpenPyTerminal App
 app = pt.TerminalApp(Sample1)
 app.fullscreen = True
 app.touchscreen = False
