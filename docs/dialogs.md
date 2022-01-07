@@ -23,7 +23,6 @@ The user can accept or reject any dialog. Generally, the button "D" is used to a
 ```python
 import openpyterminal as pt
 
-
 r = pt.MessageDialog.show_dialog(title="Title", content="Continue?", options={})
 if r:
     pass # Continue
@@ -35,6 +34,10 @@ else:
 ## Message dialog
 
 The message dialog can be used to display a message (text), ask a yes/no question, display HTML content or display an image.
+
+### Returns
+
+`True` if accepted or `False` if rejected.
 
 ### Content
 
@@ -63,6 +66,8 @@ The following options can be set:
 
 The input dialog allows the user to insert a single value with the keypad (in case a touchscreen is used a keypad is displayed on the screen).
 
+### Returns
+
 Returns the input value (int, string or float) or None if rejected.
 
 ### Content
@@ -87,6 +92,8 @@ The content is a dict that specifies the behavior of the dialog:
 
 The list dialog is a like a list view but when the user selects an item and clicks the button "D" (okay) the dialog is closed and the selected index is returned as the dialog result.
 
+### Returns
+
 Returns the index of the selected item (int) or -1 if rejected.
 
 ### Content
@@ -98,11 +105,13 @@ The list of options for the user to choose from (list of string).
 * `hide_btn_c` (boolean, default = False)
 * `hide_btn_d` (boolean, default = False)
 * `icon_btn_d` (string). Use the res path. Example: 'img/32/white/ok.svg'
-* `use_monospace_font` (string, default = False)
+* `use_monospace_font` (boolean, default = False)
 
 ## Menu dialog
 
-Similar to the list dialog, the menu dialog is show a list of options and returns the index of the option selected by the user.
+Similar to the list dialog, the menu dialog shows a list of options and returns the index of the option selected by the user.
+
+### Returns
 
 Returns the index of the selected item (int) or -1 if rejected.
 
