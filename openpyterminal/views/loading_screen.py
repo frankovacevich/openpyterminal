@@ -8,5 +8,5 @@ class LoadingScreen(QWidget):
         self.label.setText(title)
 
     def update_progress(self, progress):
-        self.progressbar.maximum = 100
+        self.progressbar.maximum = 1
         self.progressbar.value = progress
