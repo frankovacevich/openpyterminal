@@ -1,6 +1,4 @@
 import time
-import datetime
-
 from PyQt5.QtCore import QEventLoop
 from PyQt5.Qt import QTimer
 

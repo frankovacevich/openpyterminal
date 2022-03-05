@@ -9,11 +9,11 @@ from PyQt5.QtCore import Qt
 from PyQt5.QtWidgets import QDialog
 from PyQt5.uic import loadUi
 
-from ..bin.get_res import get_res
-from ..bin.flash_btn import flash_btn
-from ..bin.timer import timeout
-from ..bin.key_event import get_key
-from ..bin import environment as env
+from ..common.get_res import get_res
+from ..common.flash_btn import flash_btn
+from ..common.timer import timeout
+from ..common.key_event import get_key
+from ..common import environment as env
 
 
 class MessageDialog(QDialog):

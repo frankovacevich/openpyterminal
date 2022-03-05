@@ -4,13 +4,10 @@ Options can are set as environment variables
 
 """
 
-import sys
-from PyQt5.QtWidgets import QApplication, QWidget, QStackedWidget, QVBoxLayout
-from .bin import environment as env
 
 import sys
-from PyQt5.QtCore import *
-from PyQt5.QtGui import *
+from PyQt5.QtWidgets import QApplication
+from .common import environment as env
 
 
 class TerminalApp:

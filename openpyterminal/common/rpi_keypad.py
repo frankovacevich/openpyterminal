@@ -27,6 +27,6 @@ keypad.registerKeyPressHandler(printKey)
 
 try:
     while True:
-        time.sleep(0.8)
+        time.sleep(0.1)
 except:
     keypad.cleanup()

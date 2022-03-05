@@ -1,5 +1,3 @@
-import sys
-sys.path.append("../src")
 import openpyterminal as pt
 import datetime
 
@@ -32,6 +30,18 @@ SEQUENCE = [
         "title": "Date",
         "subtitle": "",
         "type": "date",
+    },
+    {
+        "name": "time",
+        "title": "Time",
+        "subtitle": "",
+        "type": "time",
+    },
+    {
+        "name": "current_time",
+        "title": "Current Time",
+        "subtitle": "",
+        "type": "current_time",
     },
     {
         "name": "qty",
@@ -77,10 +87,9 @@ class Sample3(pt.ListExtended):
         self.options = options
         self.update()
         
-        
     # New
     def on_btn_d(self):
-        R = CreateRecordSequence(self)
+        CreateRecordSequence(self)
     
     # Delete
     def on_btn_c(self):
@@ -88,8 +97,7 @@ class Sample3(pt.ListExtended):
         if pt.MessageDialog.show_dialog("Delete record", f"Do you want to delete record #{self.selected_item + 1}?"):
             RECORDS.pop(self.selected_item)
             self.update_options()
-            
-        
+
     # Menu
     def on_btn_b(self):
         pt.MenuDialog.show_dialog("Menu", [["Close", self.close]])
@@ -140,4 +148,3 @@ app = pt.TerminalApp(Sample3)
 app.fullscreen = True
 app.touchscreen = False
 app.run()
-

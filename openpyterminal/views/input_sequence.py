@@ -1,16 +1,15 @@
 import datetime
 
-from PyQt5 import QtCore, QtGui
-from PyQt5.QtCore import Qt
-from PyQt5.QtWidgets import QWidget, QListWidgetItem
+from PyQt5 import QtGui
+from PyQt5.QtWidgets import QWidget
 from PyQt5.uic import loadUi
 
-from ..bin.get_res import get_res
-from ..bin.flash_btn import flash_btn, cycle_flash_btn
-from ..bin.timer import interval, Chronometer
-from ..bin.key_event import get_key
-from ..bin.input_helper import InputHelper
-from ..bin import environment as env
+from ..common.get_res import get_res
+from ..common.flash_btn import flash_btn, cycle_flash_btn
+from ..common.timer import interval, Chronometer
+from ..common.key_event import get_key
+from ..common.input_helper import InputHelper
+from ..common import environment as env
 
 from .input_dialog import InputDialog
 
@@ -18,7 +17,7 @@ from .input_dialog import InputDialog
 # ==============================================================================
 # Helper class
 # ==============================================================================
-class Sequence():
+class Sequence:
 
     def __init__(self, fields, copy=True):
         self.fields = [x.copy() for x in fields] if copy else fields
@@ -92,7 +91,7 @@ class Sequence():
         if len(self.entries) == 0: return None
         new_entries = [self.entries[-1]]
         self.entries = new_entries
-        self.current_entry = 0
+        self.ce = 0
         return
 
     def reset(self):
@@ -201,7 +200,7 @@ class InputSequence(QWidget):
         self.label_units.setText(units)
 
         # Value
-        if c['type'] == 'time':
+        if c['type'] == "current_time":
             if v is not None: self.label_value.setText(str(v))
             else: self.clock_tick()
         else:
@@ -224,10 +223,9 @@ class InputSequence(QWidget):
             self.frame_btn_2_out.setHidden(True)
             self.frame_btn_8_out.setHidden(True)
 
-    #---------------------------------------------------------------------------
+    # ---------------------------------------------------------------------------
     # Buttons
     # --------------------------------------------------------------------------
-
     def keyPressEvent(self, event):
         key = get_key(event)
         if key == "": return
@@ -263,7 +261,7 @@ class InputSequence(QWidget):
         valid = True
 
         # Get value
-        if c['type'] == 'time':
+        if c['type'] == "current_time":
             if v is None: value = datetime.datetime.now().strftime("%H:%M:%S")
             else: value = v
         else:
@@ -309,28 +307,28 @@ class InputSequence(QWidget):
     def click_2(self, ev):
         flash_btn(self.frame_btn_2)
         c, v = self.sequence.get_current()
-        if c["type"] == "time": return
+        if c["type"] == "current_time": return
         self.label_value.setText(self.aux_input.write("2"))
 
     def click_8(self, ev):
         flash_btn(self.frame_btn_8)
         c, v = self.sequence.get_current()
-        if c["type"] == "time": return
+        if c["type"] == "current_time": return
         self.label_value.setText(self.aux_input.write("8"))
 
     def click_keypad_number(self, ev, number):
         c, v = self.sequence.get_current()
-        if c["type"] == "time": return
+        if c["type"] == "current_time": return
         self.label_value.setText(self.aux_input.write(number))
 
     def click_keypad_period(self, ev):
         c, v = self.sequence.get_current()
-        if c["type"] == "time": return
+        if c["type"] == "current_time": return
         self.label_value.setText(self.aux_input.write("."))
 
     def click_keypad_backspace(self, ev):
         c, v = self.sequence.get_current()
-        if c["type"] == "time": return
+        if c["type"] == "current_time": return
         self.label_value.setText(self.aux_input.clear())
 
     # --------------------------------------------------------------------------
@@ -377,7 +375,7 @@ class InputSequence(QWidget):
             self.bottom_text = ""
             self.label_text3.setText("")
 
-        if c['type'] == 'time' and v is None:
+        if c['type'] == "current_time" and v is None:
             self.label_value.setText(t)
 
     # --------------------------------------------------------------------------

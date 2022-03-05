@@ -5,12 +5,12 @@ from PyQt5.QtCore import Qt
 from PyQt5.QtWidgets import QDialog
 from PyQt5.uic import loadUi
 
-from ..bin.get_res import get_res
-from ..bin.flash_btn import flash_btn
-from ..bin.timer import interval
-from ..bin.key_event import get_key
-from ..bin.input_helper import InputHelper
-from ..bin import environment as env
+from ..common.get_res import get_res
+from ..common.flash_btn import flash_btn
+from ..common.timer import interval
+from ..common.key_event import get_key
+from ..common.input_helper import InputHelper
+from ..common import environment as env
 
 
 class InputDialog(QDialog):
