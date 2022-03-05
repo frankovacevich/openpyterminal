@@ -37,15 +37,17 @@ class Sequence:
 
     def prev_field(self):
         # Move to previous field
-        if self.cf > 0:
+        while self.cf > 0:
             self.cf -= 1
+            if "skip" in self.fields[self.cf] and self.fields[self.cf]["skip"]: continue
             return True
         return False
 
     def next_field(self):
         # Move to next field
-        if self.cf + 1 < len(self.fields):
+        while self.cf + 1 < len(self.fields):
             self.cf += 1
+            if "skip" in self.fields[self.cf] and self.fields[self.cf]["skip"]: continue
             return True
         return False
 

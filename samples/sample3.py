@@ -42,6 +42,7 @@ SEQUENCE = [
         "title": "Current Time",
         "subtitle": "",
         "type": "current_time",
+        "skip": True,
     },
     {
         "name": "qty",
