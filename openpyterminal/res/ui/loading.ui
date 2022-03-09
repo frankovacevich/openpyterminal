@@ -76,7 +76,7 @@
    <item>
     <widget class="QProgressBar" name="progressbar">
      <property name="styleSheet">
-      <string notr="true">height: 50px</string>
+      <string notr="true">height: 50px;</string>
      </property>
      <property name="maximum">
       <number>0</number>
@@ -85,7 +85,7 @@
       <number>-1</number>
      </property>
      <property name="textVisible">
-      <bool>true</bool>
+      <bool>false</bool>
      </property>
      <property name="invertedAppearance">
       <bool>false</bool>

@@ -1,13 +1,9 @@
-import datetime
-
-from PyQt5 import QtCore, QtGui
-from PyQt5.QtCore import Qt
-from PyQt5.QtWidgets import QWidget, QDialog, QListWidgetItem, QGraphicsDropShadowEffect
+from PyQt5 import QtGui
+from PyQt5.QtWidgets import QWidget, QGraphicsDropShadowEffect
 from PyQt5.uic import loadUi
 
 from ..common.get_res import get_res
 from ..common.flash_btn import flash_btn
-from ..common.timer import interval
 from ..common.key_event import get_key
 from ..common import environment as env
 
