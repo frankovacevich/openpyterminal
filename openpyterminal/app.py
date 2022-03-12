@@ -19,13 +19,23 @@ class TerminalApp:
         # Extra options
         self.touchscreen = True
         self.fullscreen = True
+        self.debug = False
 
     def run(self):
         env.set("TOUCHSCREEN_TERMINAL", self.touchscreen)
         env.set("FULLSCREEN_TERMINAL", self.fullscreen)
 
         self.view = self.view()
-        sys.exit(self.app.exec_())
+        if self.debug: self.run_tests()
+        else: sys.exit(self.app.exec_())
 
     def stop(self):
         exit()
+
+    def run_tests(self):
+        if not hasattr(self.view, "tests"):
+            print("No tests defined")
+            exit()
+
+        for test in self.view.tests:
+            test()

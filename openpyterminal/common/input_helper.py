@@ -91,7 +91,7 @@ class InputHelper:
 
         return self.value
 
-    def clear(self):
+    def clear(self):  # Backspace
         if self.type == "date":
             self.value = self.today()
 
@@ -104,6 +104,10 @@ class InputHelper:
         elif len(self.value) > 0:
             self.value = self.value[0:-1]
 
+        return self.value
+
+    def set_value(self, value):
+        self.value = str(value)
         return self.value
 
     def validate(self):

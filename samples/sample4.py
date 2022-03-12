@@ -1,9 +1,6 @@
-import subprocess
-
 import openpyterminal as pt
 import time
 import os
-import subprocess
 import git
 
 

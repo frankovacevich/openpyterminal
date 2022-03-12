@@ -214,7 +214,8 @@ class InputSequence(QWidget):
                 if c['default'] == 'auto': v = self.sequence.get_value_from_previous_entry()
                 else: v = c['default']
 
-            if v is not None: self.aux_input.value = str(v)
+            #if v is not None: self.aux_input.value = str(v)
+            if v is not None: self.aux_input.set_value(v)
             self.label_value.setText(self.aux_input.value)
 
         # Buttons 2 and 8
@@ -311,41 +312,48 @@ class InputSequence(QWidget):
         c, v = self.sequence.get_current()
         if c["type"] == "current_time": return
         self.label_value.setText(self.aux_input.write("2"))
+        self.on_value_change()
 
     def click_8(self, ev):
         flash_btn(self.frame_btn_8)
         c, v = self.sequence.get_current()
         if c["type"] == "current_time": return
         self.label_value.setText(self.aux_input.write("8"))
+        self.on_value_change()
 
     def click_keypad_number(self, ev, number):
         c, v = self.sequence.get_current()
         if c["type"] == "current_time": return
         self.label_value.setText(self.aux_input.write(number))
+        self.on_value_change()
 
     def click_keypad_period(self, ev):
         c, v = self.sequence.get_current()
         if c["type"] == "current_time": return
         self.label_value.setText(self.aux_input.write("."))
+        self.on_value_change()
 
     def click_keypad_backspace(self, ev):
         c, v = self.sequence.get_current()
         if c["type"] == "current_time": return
         self.label_value.setText(self.aux_input.clear())
+        self.on_value_change()
 
     # --------------------------------------------------------------------------
     # Value setting
     # --------------------------------------------------------------------------
     def set_value(self, value):
-        self.aux_input.value = value
-        self.label_value.setText(str(value))
+        self.label_value.setText(self.aux_input.set_value(value))
+        self.on_value_change()
 
     def label_value_clicked(self, ev):
         c, v = self.sequence.get_current()
         if c["type"] not in ["int", "float"]: return
 
         r = InputDialog.show_dialog(c["title"] + " - " + c["subtitle"], c, {"hide_keypad": False})
-        if r is not None: self.set_value(r)
+        if r is not None:
+            self.set_value(r)
+            self.on_value_change()
         self.setFocus()
 
     # --------------------------------------------------------------------------
@@ -357,6 +365,7 @@ class InputSequence(QWidget):
     def on_btn_d(self): return
     def on_sequence_end(self): return
     def on_field_load(self): return
+    def on_value_change(self): return
 
     # --------------------------------------------------------------------------
     # Clock
