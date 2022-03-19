@@ -94,11 +94,11 @@ class MenuSimple(QWidget):
         elif key == "c": self.click_c(None)
         elif key in "0123456789": self.click_number(None, int(key))
 
-    def click_c(self, ev):
+    def click_c(self, ev=None):
         flash_btn(self.frame_btn_c)
         self.on_btn_c()
 
-    def click_number(self, ev, number):
+    def click_number(self, ev=None, number=0):
         # Get number
         n = number - 1
         if n == -1: n = 9
