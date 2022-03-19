@@ -104,21 +104,3 @@ class LoadingScreen(QDialog):
 
         # Run
         loading_screen.run()
-
-
-"""
-class Load(pt.LoadingScreen):
-
-    def __init__(self):
-        super().__init__("LOADING")
-        self.min_wait = 1250
-        self.run()
-    
-    def do(self):
-        print("CACA")
-        import time
-        for i in range(0, 10):
-            time.sleep(1)
-            self.update_progress(i/10)
-        self.close()
-"""
