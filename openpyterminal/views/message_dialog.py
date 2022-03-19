@@ -110,34 +110,34 @@ class MessageDialog(QDialog):
         elif key == "c": self.click_c(None)
         elif key == "d": self.click_d(None)
 
-    def click_a(self, ev):
+    def click_a(self, ev=None):
         flash_btn(self.frame_btn_a)
         self.on_btn_a()
 
-    def click_b(self, ev):
+    def click_b(self, ev=None):
         flash_btn(self.frame_btn_b)
         self.on_btn_b()
 
-    def click_c(self, ev):
+    def click_c(self, ev=None):
         flash_btn(self.frame_btn_c)
         self.on_btn_c()
         self.result = False
         self.reject()
 
-    def click_d(self, ev):
+    def click_d(self, ev=None):
         flash_btn(self.frame_btn_d)
         self.on_btn_d()
         self.result = True
         self.accept()
 
-    def click_2(self, ev):
+    def click_2(self, ev=None):
         flash_btn(self.frame_btn_2)
         if self.current > 0:
             self.current -= 1
             self.update()
         self.on_message_change()
 
-    def click_8(self, ev):
+    def click_8(self, ev=None):
         flash_btn(self.frame_btn_8)
         if self.current + 1 < len(self.content):
             self.current += 1
