@@ -242,22 +242,22 @@ class InputSequence(QWidget):
         elif key == "backspace": self.click_keypad_backspace(None)
         else: self.click_keypad_number(None, key)
 
-    def click_a(self, ev):
+    def click_a(self, ev=None):
         flash_btn(self.frame_btn_a)
         self.on_btn_a()
 
-    def click_b(self, ev):
+    def click_b(self, ev=None):
         flash_btn(self.frame_btn_b)
         self.on_btn_b()
 
-    def click_c(self, ev):
+    def click_c(self, ev=None):
         flash_btn(self.frame_btn_c)
         self.on_btn_c()
         if self.close_on_first_field and self.sequence.cf == 0 and self.sequence.ce == 0: self.close()
         self.sequence.prev_field()
         self.update()
 
-    def click_d(self, ev):
+    def click_d(self, ev=None):
         flash_btn(self.frame_btn_d)
 
         c, v = self.sequence.get_current()
@@ -307,33 +307,33 @@ class InputSequence(QWidget):
 
         self.update()
 
-    def click_2(self, ev):
+    def click_2(self, ev=None):
         flash_btn(self.frame_btn_2)
         c, v = self.sequence.get_current()
         if c["type"] == "current_time": return
         self.label_value.setText(self.aux_input.write("2"))
         self.on_value_change()
 
-    def click_8(self, ev):
+    def click_8(self, ev=None):
         flash_btn(self.frame_btn_8)
         c, v = self.sequence.get_current()
         if c["type"] == "current_time": return
         self.label_value.setText(self.aux_input.write("8"))
         self.on_value_change()
 
-    def click_keypad_number(self, ev, number):
+    def click_keypad_number(self, ev=None, number=0):
         c, v = self.sequence.get_current()
         if c["type"] == "current_time": return
         self.label_value.setText(self.aux_input.write(number))
         self.on_value_change()
 
-    def click_keypad_period(self, ev):
+    def click_keypad_period(self, ev=None):
         c, v = self.sequence.get_current()
         if c["type"] == "current_time": return
         self.label_value.setText(self.aux_input.write("."))
         self.on_value_change()
 
-    def click_keypad_backspace(self, ev):
+    def click_keypad_backspace(self, ev=None):
         c, v = self.sequence.get_current()
         if c["type"] == "current_time": return
         self.label_value.setText(self.aux_input.clear())
@@ -346,7 +346,7 @@ class InputSequence(QWidget):
         self.label_value.setText(self.aux_input.set_value(value))
         self.on_value_change()
 
-    def label_value_clicked(self, ev):
+    def label_value_clicked(self, ev=None):
         c, v = self.sequence.get_current()
         if c["type"] not in ["int", "float"]: return
 

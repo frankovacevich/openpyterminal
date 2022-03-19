@@ -90,7 +90,7 @@ class InputDialog(QDialog):
         elif key == "backspace": self.click_keypad_backspace(None)
         else: self.click_keypad_number(None, key)
 
-    def click_c(self, ev):
+    def click_c(self, ev=None):
         flash_btn(self.frame_btn_c)
         self.on_btn_c()
 
@@ -98,7 +98,7 @@ class InputDialog(QDialog):
         self.result = None
         self.reject()
 
-    def click_d(self, ev):
+    def click_d(self, ev=None):
         flash_btn(self.frame_btn_d)
         self.on_btn_d()
 
@@ -126,7 +126,7 @@ class InputDialog(QDialog):
         self.result = r
         self.accept()
 
-    def click_keypad_number(self, ev, number):
+    def click_keypad_number(self, ev=None, number=0):
         if number == "0": flash_btn(self.frame_btn_0)
         if number == "1": flash_btn(self.frame_btn_1)
         if number == "2": flash_btn(self.frame_btn_2)
@@ -140,12 +140,12 @@ class InputDialog(QDialog):
         self.label_value.setText(self.aux_input.write(number))
         self.on_input_change()
 
-    def click_keypad_period(self, ev):
+    def click_keypad_period(self, ev=None):
         flash_btn(self.frame_btn_m)
         self.label_value.setText(self.aux_input.write("."))
         self.on_input_change()
 
-    def click_keypad_backspace(self, ev):
+    def click_keypad_backspace(self, ev=None):
         flash_btn(self.frame_btn_p)
         self.label_value.setText(self.aux_input.clear())
         self.on_input_change()

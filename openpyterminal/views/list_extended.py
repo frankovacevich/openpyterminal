@@ -122,31 +122,31 @@ class ListExtended(QWidget):
         elif key == "2": self.click_2(None)
         elif key == "8": self.click_8(None)
 
-    def click_a(self, ev):
+    def click_a(self, ev=None):
         flash_btn([self.frame_btn_a])
         self.on_btn_a()
 
-    def click_b(self, ev):
+    def click_b(self, ev=None):
         flash_btn([self.frame_btn_b])
         self.on_btn_b()
 
-    def click_c(self, ev):
+    def click_c(self, ev=None):
         flash_btn([self.frame_btn_c, self.frame_btn_c_alt])
         self.on_btn_c()
 
-    def click_d(self, ev):
+    def click_d(self, ev=None):
         flash_btn([self.frame_btn_d, self.frame_btn_d_alt])
         i = self.listbox.currentRow()
         if len(self.options) > 0 and isinstance(self.options, list) and isinstance(self.options[i], list):
             self.options[i][1]()
         self.on_btn_d()
 
-    def click_2(self, ev):
+    def click_2(self, ev=None):
         flash_btn(self.frame_btn_2)
         c = self.listbox.currentRow()
         if c > 0: self.listbox.setCurrentRow(c - 1)
 
-    def click_8(self, ev):
+    def click_8(self, ev=None):
         flash_btn(self.frame_btn_8)
         c = self.listbox.currentRow()
         if c + 1 < len(self.options): self.listbox.setCurrentRow(c + 1)
